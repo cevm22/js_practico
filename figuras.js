@@ -78,7 +78,61 @@ function areacirculo(radio){
 }
 //console.log("El área del Circulo es: " + areacirculo + "cm^2");
 
-
-
-
 console.groupEnd();
+
+////////////////////////////////////////////////////
+//aquí se interactúa con el HTML
+//===================================================
+//seccion del cuadrado
+
+function calcular_perimetro_cuadrado(){
+    //aquí mandas a buscar el input con el ID que se ingresó en HTML 
+    const input =document.getElementById("input_cuadrado");
+    //para acceder al valor del input de HTML hay que colocar ".value" al final de la variable
+    const val = perimetrocuadardo(input.value);
+    alert(val);
+}
+
+function calcular_area_cuadrado(){
+    const input =document.getElementById("input_cuadrado");    
+    const val = areacuadrada(input.value);
+    alert(val);
+}
+//===================================================
+//seccion del triángulo
+
+function calcular_perimetro_triangulo(){    
+    const base =document.getElementById("input_triangulo_base");        
+    const lado1_= document.getElementById("input_triangulo_lado1");
+    const lado2_= document.getElementById("input_triangulo_lado2");
+    const valuebase= Number(base.value);
+    const valuelado1= Number(lado1_.value);
+    const valuelado2= Number(lado2_.value);
+    result=perimetrotriangulo(valuelado1,valuelado2,valuebase);
+    alert(result);
+}
+
+function calcular_area_triangulo(){
+    const altura = document.getElementById("input_triangulo_altura");
+    const base =document.getElementById("input_triangulo_base");   
+    const valuebase= Number(base.value);
+    const valuealtura= Number(altura.value);
+    result=areatriangulo(valuebase,valuealtura);
+    alert(result);
+}
+
+
+//===================================================
+//seccion del circulo
+
+function calcular_area_circulo(){
+    const radio = document.getElementById("input_radio_circulo");    
+    result=areacirculo(Number(radio.value));
+    alert(result);
+}
+
+function calcular_perimetro_circulo(){
+    const radio = document.getElementById("input_radio_circulo");    
+    result=perimetrocirculo(Number(radio.value));
+    alert(result);
+}
