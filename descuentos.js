@@ -42,7 +42,7 @@ const cupones=[{
     }
 ];
 
-//esta funcion es para el caluclo del porcentaje
+//esta funcion es para el calculo del porcentaje
 function cupones_descuento(precio,descuento){
     const desc=1-(descuento/100);
     const precio_con_descuento=desc*precio;
